@@ -3,6 +3,7 @@ import { DataSet } from './data-set';
 export class Column {
 
   title: string = '';
+  tooltip: string = '';
   type: string = '';
   class: string = '';
   width: string = '';
@@ -54,6 +55,7 @@ export class Column {
 
   protected process() {
     this.title = this.settings['title'];
+    this.tooltip = this.settings['tooltip'];
     this.class = this.settings['class'];
     this.width = this.settings['width'];
     this.type = this.prepareType();
